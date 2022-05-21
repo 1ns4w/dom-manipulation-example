@@ -1,5 +1,3 @@
-import "./style.css";
-
 const baseURL = 'https://platzi-avo.vercel.app'
 
 const getData = async() => {
