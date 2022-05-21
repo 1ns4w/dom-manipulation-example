@@ -22,7 +22,7 @@ const createCard = (element) => {
 
     image.src = baseURL + element.image
     title.textContent = element.name
-    price.textContent = element.price
+    price.textContent = formatPrice(element.price, "es", "PEN")
 
     cardContainer.classList.add("card")
     image.classList.add("card__image")
@@ -31,6 +31,14 @@ const createCard = (element) => {
 
     cardContainer.append(image, title, price)
     return cardContainer
+}
+
+const formatPrice = (price, lang = "en-EN", currency = "USD") => {
+  const formattedPrice = new window.Intl.NumberFormat(lang, {
+    style: 'currency',
+    currency: currency
+  }).format(price)
+  return formattedPrice
 }
 
 const renderCards = async() => {
