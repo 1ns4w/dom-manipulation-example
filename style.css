@@ -26,6 +26,7 @@ body {
   justify-content: center;
   grid-template-columns: repeat(3, 250px);
   margin-top: 20px;
+  row-gap: 10px;
 }
 
 .card {
@@ -36,4 +37,8 @@ body {
 
 .card__image {
   width: 80px;
+}
+
+.card__title {
+  font-weight: bold;
 }

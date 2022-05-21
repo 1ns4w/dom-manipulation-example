@@ -17,7 +17,7 @@ const createCard = (element) => {
 
     const cardContainer = document.createElement('div')
     const image = document.createElement('img')
-    const title = document.createElement('h3')
+    const title = document.createElement('div')
     const price = document.createElement('div')
 
     image.src = baseURL + element.image
